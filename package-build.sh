@@ -11,6 +11,4 @@ WAR_ARTIFACT=$ARTIFACTS/MIREBALAIS-OPENMRS/shared
 LATEST_WAR=`ls -t $WAR_ARTIFACT/|head -1`
 cp $WAR_ARTIFACT/$LATEST_WAR/war/openmrs.war ./mirebalais.war
 
-perl -pi -e 's/mirebalais \([^)]+\)/mirebalais (1.0.${bamboo.buildNumber}-1)/' debian/changelog
-
 debuild --no-tgz-check -i -us -uc -b
