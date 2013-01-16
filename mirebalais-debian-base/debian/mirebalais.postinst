@@ -4,7 +4,7 @@ set -e
 
 case "$1" in
     configure)
-        chown -R tomcat6:tomcat6 /home/ffreire/.OpenMRS;
+        chown -R tomcat6:tomcat6 /home/tomcat6/.OpenMRS;
         service tomcat6 start
     ;;
 
