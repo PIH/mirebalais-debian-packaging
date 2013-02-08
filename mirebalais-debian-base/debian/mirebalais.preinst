@@ -4,7 +4,7 @@ set -e
 
 case "$1" in
     install)
-        service tomcat6 stop
+        #service tomcat6 stop
     ;;
 
     upgrade)
