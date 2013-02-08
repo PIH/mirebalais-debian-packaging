@@ -13,7 +13,7 @@ case "$1" in
     ;;
 
     abort-upgrade)
-        service tomcat6 start
+        #service tomcat6 start
     ;;
 
     *)
