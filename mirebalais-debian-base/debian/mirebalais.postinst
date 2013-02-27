@@ -3,18 +3,22 @@
 set -e
 
 case "$1" in
-    configure)
-        chown -R tomcat6:tomcat6 /home/tomcat6/.OpenMRS;
-        #service tomcat6 start
+  configure)
+    chown -R tomcat6:tomcat6 /home/tomcat6/.OpenMRS
+
+    if [ -n "$2" ]
+    then
+      #this means it's an upgrade. on clean install, we don't want to start tomcat
+      service tomcat6 start
+    fi
     ;;
 
-    abort-upgrade|abort-remove|abort-deconfigure)
-        #service tomcat6 start
+  abort-upgrade|abort-remove|abort-deconfigure)
     ;;
 
-    *)
-        echo "postinst called with unknown argument \`$1'" >&2
-        exit 1
+  *)
+    echo "postinst called with unknown argument \`$1'" >&2
+    exit 1
     ;;
 esac
 
