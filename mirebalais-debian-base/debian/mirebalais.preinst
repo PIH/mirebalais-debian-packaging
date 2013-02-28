@@ -11,7 +11,10 @@ case "$1" in
     rm -rf /usr/local/tomcat6/webapps/mirebalais/
     rm -rf /usr/local/tomcat6/temp
     rm -rf /usr/local/tomcat6/work
-    mysqldump -u backup -pbackup --opt --flush-logs --single-transaction openmrs | bzcat -zc > ~/openmrs_backup_$2.sql.bz2
+    if [ -f /usr/local/sbin/mysqlbackup.sh ]
+    then
+      sh /usr/local/sbin/mysqlbackup.sh $2
+    fi
     ;;
 
   abort-upgrade)

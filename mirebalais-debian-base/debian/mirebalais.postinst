@@ -5,6 +5,7 @@ set -e
 case "$1" in
   configure)
     chown -R tomcat6:tomcat6 /home/tomcat6/.OpenMRS
+    chown -R tomcat6:tomcat6 /usr/local/tomcat6
 
     if [ -n "$2" ]
     then
