@@ -8,7 +8,7 @@ case "$1" in
 
   upgrade)
     service tomcat6 stop
-    rm -rf /usr/local/tomcat6/webapps/mirebalais/
+    rm -rf /usr/local/tomcat6/webapps/zlemr/
     rm -rf /usr/local/tomcat6/temp
     rm -rf /usr/local/tomcat6/work
     if [ -f /usr/local/sbin/mysqlbackup.sh ]

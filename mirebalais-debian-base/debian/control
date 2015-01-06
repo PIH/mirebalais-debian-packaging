@@ -1,17 +1,17 @@
-Source: mirebalais
+Source: zlemr
 Section: unknown
 Priority: extra
-Maintainer: PIH <mirebalais@thoughtworks.com>
+Maintainer: PIH <medinfo@pih.org>
 Build-Depends: debhelper (>= 8.0.0)
 Standards-Version: 3.9.2
 Homepage: http://github.com/PIH
-#Vcs-Git: git://git.debian.org/collab-maint/mirebalais.git
-#Vcs-Browser: http://git.debian.org/?p=collab-maint/mirebalais.git;a=summary
+#Vcs-Git: git://git.debian.org/collab-maint/zlemr.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/zlemr.git;a=summary
 
-Package: mirebalais
+Package: zlemr
 Architecture: all
 Depends: ${misc:Depends}
-Description: Implementation of OpenMRS for the Mirebalais hospital
+Description: Implementation of OpenMRS for the Zanmi Lasante
  This package install the OpenMRS war file and the necessary
- modules that compose the mirebalais implementation. It also
+ modules that compose the Zanmi Lasante implementation. It also
  install configurations files necessary to run the server.
