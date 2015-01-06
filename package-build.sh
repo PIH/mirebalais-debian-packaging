@@ -1,4 +1,4 @@
-cd mirebalais-debian-base
+cd zlemr-debian-base
 
 ARTIFACTS=/opt/bamboo-home/artifacts
 OMOD_ARTIFACT=$ARTIFACTS/MIREBALAIS-INTEGRATION/shared
