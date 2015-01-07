@@ -1,4 +1,4 @@
-ZL-EMR for Debian
+PIH-EMR for Debian
 ---------------------
 
 This package will depend on a local installation of tomcat6 (not the debian package)

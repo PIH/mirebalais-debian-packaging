@@ -1,4 +1,4 @@
-cd zlemr-debian-base
+cd pihemr-debian-base
 
 ARTIFACTS=/opt/bamboo-home/artifacts
 OMOD_ARTIFACT=$ARTIFACTS/MIREBALAIS-INTEGRATION/shared
@@ -9,6 +9,6 @@ unzip -j $OMOD_ARTIFACT/$LATEST_OMOD/omod-zip/mirebalais-distribution*.zip -d  h
 
 WAR_ARTIFACT=$ARTIFACTS/MIREBALAIS-OPENMRS/shared
 LATEST_WAR=`ls -t $WAR_ARTIFACT/|head -1`
-cp $WAR_ARTIFACT/$LATEST_WAR/war/openmrs.war ./zlemr.war
+cp $WAR_ARTIFACT/$LATEST_WAR/war/openmrs.war ./openmrs.war
 
 debuild --no-tgz-check -i -us -uc -b
