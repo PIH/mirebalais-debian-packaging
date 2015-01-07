@@ -4,6 +4,13 @@ set -e
 
 case "$1" in
   configure)
+
+    # for mirebalais imlpementation, rename the war
+    if [ -f /home/tomcat6/.OpenMRS/mirebalais-runtime.properties ]
+    then
+        mv -f /usr/local/tomcat6/webapps/openmrs.war /usr/local/tomcat6/webapps/mirebalais.war
+    fi
+
     chown -R tomcat6:tomcat6 /home/tomcat6/.OpenMRS
     chown -R tomcat6:tomcat6 /usr/local/tomcat6
 
