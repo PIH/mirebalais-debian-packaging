@@ -7,12 +7,12 @@ case "$1" in
     ;;
 
   upgrade)
-    service tomcat6 stop
+    service tomcat7 stop
 
-    rm -rf /usr/local/tomcat6/webapps/openmrs
-    rm -rf /usr/local/tomcat6/webapps/mirebalais
-    rm -rf /usr/local/tomcat6/temp
-    rm -rf /usr/local/tomcat6/work
+    rm -rf /usr/local/tomcat7/webapps/openmrs
+    rm -rf /usr/local/tomcat7/webapps/mirebalais
+    rm -rf /usr/local/tomcat7/temp
+    rm -rf /usr/local/tomcat7/work
 
     if [ -f /usr/local/sbin/mysqlbackup.sh ]
     then

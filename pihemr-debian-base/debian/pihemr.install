@@ -1,3 +1,3 @@
-home/tomcat6/.OpenMRS home/tomcat6/
+home/tomcat7/.OpenMRS home/tomcat7/
 etc/default/* etc/default/
-openmrs.war usr/local/tomcat6/webapps/
+openmrs.war usr/local/tomcat7/webapps/
