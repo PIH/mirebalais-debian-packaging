@@ -14,7 +14,7 @@ case "$1" in
     rm -rf /usr/local/tomcat7/temp
     rm -rf /usr/local/tomcat7/work
 
-    if [ -f /usr/local/sbin/mysqlbackuptemp.sh ]
+    if [ -f /usr/local/sbin/mysqlbackup.sh ]
     then
       sh /usr/local/sbin/mysqlbackup.sh $2
     fi
