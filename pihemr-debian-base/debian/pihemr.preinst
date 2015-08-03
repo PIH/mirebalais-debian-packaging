@@ -13,6 +13,7 @@ case "$1" in
     rm -rf /usr/local/tomcat7/webapps/mirebalais
     rm -rf /usr/local/tomcat7/temp
     rm -rf /usr/local/tomcat7/work
+    rm -rf /home/tomcat7/.OpenMRS/module
 
     if [ -f /usr/local/sbin/mysqlbackup.sh ]
     then
