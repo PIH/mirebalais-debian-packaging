@@ -1,6 +1,6 @@
 cd pihemr-debian-base
 
-ARTIFACTS=/opt/bamboo-home/artifacts
+ARTIFACTS=/opt/bamboo5.9/artifacts
 OMOD_ARTIFACT=$ARTIFACTS/MIREBALAIS-INTEGRATION/shared
 LATEST_OMOD=`ls -t $OMOD_ARTIFACT/|head -1`
 
