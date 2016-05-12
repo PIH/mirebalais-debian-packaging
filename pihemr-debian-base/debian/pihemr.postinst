@@ -8,11 +8,11 @@ case "$1" in
     # for mirebalais implementation, rename the war
     if [ -f /home/tomcat7/.OpenMRS/mirebalais-runtime.properties ]
     then
-        mv -f /usr/local/tomcat7/webapps/openmrs.war /usr/local/tomcat7/webapps/mirebalais.war
+        mv -f /var/lib/tomcat7/webapps/openmrs.war /var/lib/tomcat7/webapps/mirebalais.war
     fi
 
     chown -R tomcat7:tomcat7 /home/tomcat7/.OpenMRS
-    chown -R tomcat7:tomcat7 /usr/local/tomcat7
+    chown -R tomcat7:tomcat7 /var/lib/tomcat7
 
     if [ -n "$2" ]
     then

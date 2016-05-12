@@ -9,10 +9,10 @@ case "$1" in
   upgrade)
     service tomcat7 stop
 
-    rm -rf /usr/local/tomcat7/webapps/openmrs
-    rm -rf /usr/local/tomcat7/webapps/mirebalais
-    rm -rf /usr/local/tomcat7/temp
-    rm -rf /usr/local/tomcat7/work
+    rm -rf /var/lib/tomcat7/webapps/openmrs
+    rm -rf /var/lib/tomcat7/webapps/mirebalais
+    rm -rf /var/lib/tomcat7/temp
+    rm -rf /var/lib/tomcat7/work
     rm -rf /home/tomcat7/.OpenMRS/modules
 
     if [ -f /usr/local/sbin/mysqlbackup.sh ]
