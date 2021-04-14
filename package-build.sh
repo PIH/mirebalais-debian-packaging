@@ -1,14 +1,23 @@
 cd pihemr-debian-base
 
 ARTIFACTS=/opt/bamboo5.9/artifacts
-OMOD_ARTIFACT=$ARTIFACTS/MIREBALAIS-INTEGRATION/shared
-LATEST_OMOD=`ls -t $OMOD_ARTIFACT/|head -1`
+INTEGRATION_SHARED_DIR=${ARTIFACTS}/MIREBALAIS-INTEGRATION/shared
+LATEST_BUILD_DIR=`ls -t ${INTEGRATION_SHARED_DIR}/|head -1`
 
-mkdir home/tomcat7/.OpenMRS/modules
-unzip -j $OMOD_ARTIFACT/$LATEST_OMOD/omod-zip/mirebalais-distribution*.zip -d  home/tomcat7/.OpenMRS/modules/
+DISTRO_DIR=home/tomcat7/.OpenMRS/distribution
+MODULE_DIR=home/tomcat7/.OpenMRS/modules
+OWA_DIR=home/tomcat7/.OpenMRS/owa
 
-WAR_ARTIFACT=$ARTIFACTS/MIREBALAIS-OPENMRS/shared
-LATEST_WAR=`ls -t $WAR_ARTIFACT/|head -1`
-cp $WAR_ARTIFACT/$LATEST_WAR/war/openmrs.war ./openmrs.war
+rm -fR ${DISTRO_DIR} && mkdir ${DISTRO_DIR}
+rm -fR ${MODULE_DIR} && mkdir ${MODULE_DIR}
+rm -fR ${OWA_DIR} && mkdir ${OWA_DIR}
+
+unzip ${INTEGRATION_SHARED_DIR}/${LATEST_BUILD_DIR}/distribution-zip/mirebalais-distribution*.zip -d  ${DISTRO_DIR}/
+mv ${DISTRO_DIR}/mirebalais-distribution-*/openmrs_webapps/openmrs.war ./openmrs.war
+mv ${DISTRO_DIR}/mirebalais-distribution-*/openmrs_modules/* ${MODULE_DIR}/
+mv ${DISTRO_DIR}/mirebalais-distribution-*/openmrs_owas/* ${OWA_DIR}/
+rename 's/\.owa$/.zip/' ${OWA_DIR}/*.owa
+
+rm -fR ${DISTRO_DIR}
 
 debuild --no-tgz-check -i -us -uc -b
