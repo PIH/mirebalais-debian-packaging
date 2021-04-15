@@ -20,6 +20,7 @@ case "$1" in
     rm -rf /var/lib/tomcat7/temp/*
     rm -rf /var/lib/tomcat7/work/*
     rm -rf /home/tomcat7/.OpenMRS/modules
+    rm -rf /home/tomcat7/.OpenMRS/owa
     ;;
 
   abort-upgrade)
