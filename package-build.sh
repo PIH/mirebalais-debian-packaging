@@ -9,6 +9,7 @@ DISTRO_DIR=home/tomcat7/.OpenMRS/distribution
 MODULE_DIR=home/tomcat7/.OpenMRS/modules
 OWA_DIR=home/tomcat7/.OpenMRS/owa
 FRONTEND_DIR=home/tomcat7/.OpenMRS/frontend
+SITE_FRONTEND_DIR_RELATIVE_TO_FRONTEND=../configuration/frontend
 
 rm -fR ${DISTRO_DIR} && mkdir ${DISTRO_DIR}
 rm -fR ${MODULE_DIR} && mkdir ${MODULE_DIR}
@@ -21,6 +22,7 @@ mv ${DISTRO_DIR}/mirebalais-distribution-*/openmrs_modules/* ${MODULE_DIR}/
 mv ${DISTRO_DIR}/mirebalais-distribution-*/openmrs_owas/* ${OWA_DIR}/
 rename 's/\.owa$/.zip/' ${OWA_DIR}/*.owa
 mv ${DISTRO_DIR}/mirebalais-distribution-*/openmrs_frontend/* ${FRONTEND_DIR}/
+ln -s ${SITE_FRONTEND_DIR_RELATIVE_TO_FRONTEND} ${FRONTEND_DIR}/site
 
 rm -fR ${DISTRO_DIR}
 
