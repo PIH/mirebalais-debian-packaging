@@ -17,11 +17,11 @@ rm -fR ${OWA_DIR} && mkdir ${OWA_DIR}
 rm -fR ${FRONTEND_DIR} && mkdir ${FRONTEND_DIR}
 
 unzip ${INTEGRATION_SHARED_DIR}/${LATEST_BUILD_DIR}/distribution-zip/pihemr*.zip -d  ${DISTRO_DIR}/
-mv ${DISTRO_DIR}/mirebalais-distribution-*/openmrs_webapps/openmrs.war ./openmrs.war
-mv ${DISTRO_DIR}/mirebalais-distribution-*/openmrs_modules/* ${MODULE_DIR}/
-mv ${DISTRO_DIR}/mirebalais-distribution-*/openmrs_owas/* ${OWA_DIR}/
+mv ${DISTRO_DIR}/pihemr-*/openmrs_webapps/openmrs.war ./openmrs.war
+mv ${DISTRO_DIR}/pihemr-*/openmrs_modules/* ${MODULE_DIR}/
+mv ${DISTRO_DIR}/pihemr-*/openmrs_owas/* ${OWA_DIR}/
 rename 's/\.owa$/.zip/' ${OWA_DIR}/*.owa
-mv ${DISTRO_DIR}/mirebalais-distribution-*/openmrs_frontend/* ${FRONTEND_DIR}/
+mv ${DISTRO_DIR}/pihemr-*/openmrs_frontend/* ${FRONTEND_DIR}/
 ln -s ${SITE_FRONTEND_DIR_RELATIVE_TO_FRONTEND} ${FRONTEND_DIR}/site
 
 rm -fR ${DISTRO_DIR}
