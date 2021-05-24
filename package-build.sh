@@ -16,7 +16,7 @@ rm -fR ${MODULE_DIR} && mkdir ${MODULE_DIR}
 rm -fR ${OWA_DIR} && mkdir ${OWA_DIR}
 rm -fR ${FRONTEND_DIR} && mkdir ${FRONTEND_DIR}
 
-unzip ${INTEGRATION_SHARED_DIR}/${LATEST_BUILD_DIR}/distribution-zip/mirebalais-distribution*.zip -d  ${DISTRO_DIR}/
+unzip ${INTEGRATION_SHARED_DIR}/${LATEST_BUILD_DIR}/distribution-zip/pihemr*.zip -d  ${DISTRO_DIR}/
 mv ${DISTRO_DIR}/mirebalais-distribution-*/openmrs_webapps/openmrs.war ./openmrs.war
 mv ${DISTRO_DIR}/mirebalais-distribution-*/openmrs_modules/* ${MODULE_DIR}/
 mv ${DISTRO_DIR}/mirebalais-distribution-*/openmrs_owas/* ${OWA_DIR}/
